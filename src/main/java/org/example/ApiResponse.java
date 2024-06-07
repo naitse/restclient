@@ -2,14 +2,14 @@ package org.example;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Builder
 @Getter
 @Setter
 public class ApiResponse implements transformableInterface{
-    private final Gson gson = DefaultGson.getInstance();
     private final ObjectMapper objectMapper = DefaultMapper.getInstance();
     private Integer statusCode;
     private String message;
